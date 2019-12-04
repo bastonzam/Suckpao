@@ -1,0 +1,39 @@
+<body>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="http://localhost:4200/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Log in</li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+
+<div align="center">
+<div class="card"  style="width: 20rem;">
+  <i class="material-icons" >
+    account_circle
+  </i>
+  <div class="card-body">
+    <h5 class="card-title">Log in</h5>
+
+    <form >
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="User name"  [(ngModel)]="data.frist"
+               required name="frist" #frist >
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" [(ngModel)]="data.last"
+               required name="last" #last>
+      </mat-form-field>
+    </form>
+    <br>
+    <br>
+    <a href="cusorder" class="btn btn-primary">Sign in</a>
+    <br>
+    <br>
+    <br>
+
+    <p style="text-align: center; color: #0069D9; font-size:12px"><a href="cussignup">สมัครสมาชิก</a></p>
+  </div>
+</div>
+</div>
+</body>
