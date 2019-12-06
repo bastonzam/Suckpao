@@ -1,0 +1,13 @@
+.box {
+  width: 50%;
+  height: 600px;
+  display: block;
+  margin: auto;
+
+}
+.font{
+  font-family: 'Prompt', sans-serif;
+  text-align: center;
+  color: #FFFFFF;
+
+}

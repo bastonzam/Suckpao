@@ -7,12 +7,13 @@ export interface PeriodicElement {
   position: string;
   weight: number;
   symbol: string;
+  status: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 'เสื้อ', name: 'มูชา', weight: 50, symbol: 'ป้าใจดี'},
-  {position: 'กางเกง', name: 'มาช', weight: 45, symbol: 'ป้าใจร้าย'},
-  {position: 'กางเกง', name: 'ราช', weight: 67, symbol: 'ป้าใจร้าย'},
+  {position: 'เสื้อ', name: 'รีด', weight: 50, symbol: 'ป้าใจดี',status: "เสร็จแล้ว"},
+  {position: 'กางเกง', name: 'รีด', weight: 45, symbol: 'ป้าใจร้าย',status: "เสร็จแล้ว"},
+  {position: 'กางเกง', name: 'รีด', weight: 67, symbol: 'ป้าใจร้าย',status: "เสร็จแล้ว"},
 
 ];
 
@@ -23,7 +24,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./customer-order.component.css']
 })
 export class CustomerOrderComponent implements OnInit {
- displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+ displayedColumns: string[] = ['position', 'name', 'weight', 'symbol','status'];
   dataSource = ELEMENT_DATA;
 
 

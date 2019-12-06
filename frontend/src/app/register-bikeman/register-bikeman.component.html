@@ -1,0 +1,96 @@
+<mat-toolbar style="background-color:#330000" class="example-full-width">
+  <span style="color:#FFFFFF;">REGISTER</span>
+</mat-toolbar>
+
+
+<body  class="dataBox" >
+<br><br><br>
+<mat-card class="example-card" style="background-color:#111111">
+  <mat-form-field class="boxx" >
+    <mat-select placeholder="คำนำหน้า" [(ngModel)]="titleSelect">
+      <mat-option *ngFor="let title of titles" [value]="title.id">
+        {{title.title}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  &nbsp;&nbsp;
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="name" [(ngModel)]="name">
+  </mat-form-field>
+
+  &nbsp;&nbsp;
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="lastname" [(ngModel)]="lastname">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="address">
+    <textarea matInput placeholder="ที่อยู่" [(ngModel)]="address"></textarea>
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="ตำบล" [(ngModel)]="tambon">
+  </mat-form-field>&nbsp;&nbsp;
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="อำเภอ" [(ngModel)]="amphoe">
+  </mat-form-field>
+  &nbsp;&nbsp;
+  <mat-form-field class="boxx" >
+    <mat-select placeholder="จังหวัด" [(ngModel)]="provinceSelect">
+      <mat-option *ngFor="let province of provinces" [value]="province.id">
+        {{province.provincename}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="รหัสไปรษณีย์" maxlength="5" [(ngModel)]="postcode">
+  </mat-form-field>
+  &nbsp;&nbsp;
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Tel:" maxlength="10" [(ngModel)]="tel">
+  </mat-form-field>
+
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <input matInput [matDatepicker]="picker" placeholder="วัน/เดือน/ปี เกิด"style="color:black;" [(ngModel)]="birthday">
+    <mat-datepicker-toggle matSuffix [for]="picker"style="color:black;"></mat-datepicker-toggle>
+    <mat-datepicker #picker ></mat-datepicker>
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="email" [(ngModel)]="email">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="userid" [(ngModel)]="userid">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="password" type="password" [(ngModel)]="password1">
+  </mat-form-field>
+
+  <br>
+
+
+  <br>
+  <br>
+  <button mat-fab color="primary" class="enter" (click)="enter()">Enter</button> &nbsp;&nbsp;&nbsp;
+</mat-card>
+</body>
+

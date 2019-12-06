@@ -1,0 +1,56 @@
+<div align="center">
+
+  <mat-card  style="background-color:#BEBEBE;width:100%">
+
+
+
+
+
+    <br>
+
+
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:#FFFFFF">
+      <mat-button-toggle value="left" style="color:#000000;" ><a routerLink="/login-store">Login</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:#FFFFFF">
+      <mat-button-toggle value="left" style="color:#000000;" ><a routerLink="/status-customer">StatusCustomer</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:#FFFFFF">
+      <mat-button-toggle value="left" style="color:#000000;" ><a routerLink="/checkout">Check Order</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:#FFFFFF">
+      <mat-button-toggle value="left" style="color:#000000;" ><a routerLink="/status-money">Status/Money</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>
+
+<br><br>
+<table class="table" width="80%">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Order</th>
+    <th scope="col">รับลูกค้า</th>
+    <th scope="col">สถานะ</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>7</th>
+    <td><button mat-raised-button color="accent">รับ</button></td>
+    <td>รับแล้ว</td>
+  </tr>
+  <tr>
+    <th>23</th>
+    <td><button mat-raised-button color="accent">รับ</button></td>
+    <td>ยังไม่รับ</td>
+  </tr>
+  <tr>
+    <th>37</th>
+    <td><button mat-raised-button color="accent">รับ</button></td>
+    <td>ยังไม่รับ</td>
+  </tr>
+  </tbody>
+</table>

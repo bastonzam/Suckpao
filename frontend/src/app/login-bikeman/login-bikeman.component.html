@@ -1,0 +1,33 @@
+
+
+
+
+
+
+<mat-card class = "example-card2" style="background-color:#333333" align="center">
+  <mat-card class = "example-card2" style="background-color:#003333">
+    <mat-toolbar-row>
+      <span class = "version-info" style="color:#FFFF99;" >Admin</span> &nbsp;
+      <span class="example-fill-remaining-space"></span>
+    </mat-toolbar-row>
+  </mat-card>
+  <br>
+  <form class="example-form">
+    <H2 class="example-full-width">login</H2>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Username" [(ngModel)]="id"  [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" ng-hide="showpassword" type="password" placeholder="PASSWORD" [(ngModel)]="password"  [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    <br>
+
+    <div class="example-full-width">
+      <button mat-raised-button color="primary" ><a routerLink="/bikeman">Login</a></button>
+      <button mat-raised-button color="warn" >Reset</button>
+      <br>
+      <a mat-button  style="color:#33CC33;" routerLink="/register-bikeman">CREATE ACCOUNT</a>
+    </div>
+
+  </form>
+</mat-card>

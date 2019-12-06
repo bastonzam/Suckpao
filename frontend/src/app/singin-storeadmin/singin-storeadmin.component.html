@@ -1,0 +1,105 @@
+<div align="center">
+
+  <mat-card class="example-card" style="background-color:rgb(238, 168, 147)">
+
+
+
+
+
+    <br>
+
+
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/login-storead">Login</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/check-order">check-order</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/amount">amount</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/total-list">total-list</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+
+
+
+
+
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>
+
+
+
+
+<br><br><html>
+<body><br>
+<div align="center">
+  <form class="example-form">
+    <mat-form-field>
+      <mat-label>คำนำหน้า</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="name" >
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="lastname" >
+    </mat-form-field><br>
+    <mat-form-field class="address">
+      <textarea matInput placeholder="ที่อยู่"></textarea>
+    </mat-form-field><br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="ตำบล" >
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="อำเภอ" >
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <mat-label>จังหวัด</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field><br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="รหัสไปรษณีย์" >
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="เบอร์โทร" >
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field><br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="email" >
+    </mat-form-field><br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Userid" >
+    </mat-form-field><br>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Password" >
+    </mat-form-field><br><br><br>
+    <div class="example-button-row">
+      <button mat-fab color="primary">Enter</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-fab color="primary">Cancel</button>
+    </div><br><br>
+
+
+  </form>
+</div>
+</body>
+
+
+
+</html>

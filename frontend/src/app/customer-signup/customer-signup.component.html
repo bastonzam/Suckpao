@@ -1,71 +1,130 @@
-<mat-card >
+
+<div align="center">
+<mat-card  style="width:80%" >
 
   <mat-card-title>Sign up</mat-card-title>
   <mat-card-subtitle>Your info</mat-card-subtitle>
 
-  <form>
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Step 1
+        </mat-panel-title>
+        <mat-panel-description>
+          กรอกข้อมูลการสมัคร
+          <mat-icon>assignment_ind</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-form-field>
+        <input matInput placeholder="Email">
+      </mat-form-field>
+::
+      <mat-form-field>
+        <input matInput placeholder="Username">
+      </mat-form-field>
+
+      ::
+      <mat-form-field>
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
 
 
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputName">Name</label>
-          <input type="name" class="form-control" id="inputName">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputLast">Last Name</label>
-          <input type="last" class="form-control" id="inputLast">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputPassword4">Password</label>
-          <input type="password" class="form-control" id="inputPassword4">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-      </div>
-      <div class="form-group">
-        <label for="inputAddress2">Address 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>Choose...</option>
-            <option>กำแพงเพชร</option>
-            <option>กรุงเทพมหานคร</option>
-            <option>นครราชสีมา</option>
-            <option>นครชัยแอร์</option>
-          </select>
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
-          <label class="form-check-label" for="gridCheck">
-            ยอมรับข้อตกลง
-          </label>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">สมัคร</button>
+      <mat-action-row>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
 
-  </form>
+
+
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Step 2
+        </mat-panel-title>
+        <mat-panel-description>
+          ข้อมูลส่วนตัว
+          <mat-icon>account_circle</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-form-field>
+        <input matInput placeholder="ชื่อ">
+      </mat-form-field>
+      ::
+      <mat-form-field>
+        <input matInput placeholder="นามสกุล">
+      </mat-form-field>
+      ::
+      <mat-form-field>
+        <input matInput placeholder="วันเกิด" [matDatepicker]="picker" (focus)="picker.open()" readonly>
+      </mat-form-field>
+      <mat-datepicker #picker></mat-datepicker>
+
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Step 3
+        </mat-panel-title>
+        <mat-panel-description>
+          ที่อยู่ส่วนตัว
+          <mat-icon>map</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+
+      <mat-form-field>
+        <input matInput placeholder="Zipcode">
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <mat-label>จังหวัด</mat-label>
+        <mat-select [(value)]="selected">
+
+          <mat-option value="รีด">BKK</mat-option>
+          <mat-option value="ไม่รีด">KORAT </mat-option>
+
+        </mat-select>
+      </mat-form-field>
+
+
+
+      <mat-form-field>
+        <input matInput placeholder="อำเภอ">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="ตำบล">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="ที่อยู่">
+      </mat-form-field>
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">End</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+  <br>
+  <br>
+
+   <div align="center"><button mat-raised-button color="primary"  >  ยืนยัน</button></div>
 
 
 
 
 
 </mat-card>
+</div>

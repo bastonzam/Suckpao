@@ -1,0 +1,80 @@
+<div align="center">
+
+  <mat-card class="example-card" style="background-color:rgb(238, 168, 147)">
+
+
+
+
+
+    <br>
+
+
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/login-storead">Login</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/check-order">check-order</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/amount">amount</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/total-list">total-list</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+
+
+
+
+
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>
+
+
+
+
+<br>
+<br>
+<br>
+<div class="form-group col-md-4">
+  <label for="inputState"><h4>ชื่อซักแมน</h4></label>
+  <select id="inputState" class="form-control">
+    <option selected>ชื่อซักแมน</option>
+    <option>เอ็มซักแมน</option>
+    <option>ไอซ์ซักแมน</option>
+  </select>
+</div>
+
+<mat-form-field>
+  <input type="date" class="form-control" id="dateinput" placeholder="วว/ดด/ปป">
+</mat-form-field>
+<br>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">ลำดับ</th>
+    <th scope="col">ออเดอร์</th>
+    <th scope="col">ชื่อลูกค้า</th>
+    <th scope="col">ชื่อร้าน</th>
+    <th scope="col">ราคา</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>1</th>
+    <td>1</td>
+    <td>ดอม</td>
+    <th>ป้าใจดี</th>
+    <td>200</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td>2</td>
+    <td>ไอซ์</td>
+    <th>ป้าใจร้าย</th>
+    <td>300</td>
+  </tr>
+  </tbody>
+</table>

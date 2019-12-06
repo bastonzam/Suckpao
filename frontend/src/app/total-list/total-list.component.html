@@ -1,0 +1,123 @@
+<div align="center">
+
+  <mat-card class="example-card" style="background-color:rgb(238, 168, 147)">
+
+
+
+
+
+    <br>
+
+
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/login-storead">Login</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/check-order">check-order</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/amount">amount</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/total-list">total-list</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+
+
+
+
+
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>
+
+
+
+
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<h2>Oder</h2>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">ลำดับ</th>
+    <th scope="col">ออเดอร์</th>
+    <th scope="col">ชื่อลูกค้า</th>
+    <th scope="col">ชื่อร้าน</th>
+    <th scope="col">ชื่อซักแมน</th>
+    <th scope="col">ราคา</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>1</th>
+    <td>1</td>
+    <td>ดอม</td>
+    <th>ป้าใจดี</th>
+    <td>เอ็มซักแมน</td>
+    <td>200</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td>2</td>
+    <td>ไอซ์</td>
+    <th>ป้าใจร้าย</th>
+    <td>เอ็มซักแมน</td>
+    <td>300</td>
+  </tr>
+  </tbody>
+</table>
+
+
+<br>
+<br>
+<br>
+<br>
+<h2>พนักงาน</h2>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">ลำดับ</th>
+    <th scope="col">ชื่อซักแมน</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>1</th>
+    <td>เอ็มซักแมน</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td>ไอซ์ซักแมน</td>
+  </tr>
+  </tbody>
+</table>
+
+
+<br>
+<br>
+<br>
+<br>
+<h2>ร้านซักรีด</h2>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">ลำดับ</th>
+    <th scope="col">ชื่อร้าน</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>1</th>
+    <td>ป้าใจดี</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td>ป้า</td>
+  </tr>
+  </tbody>
+</table>

@@ -34,6 +34,24 @@ body {
 
  }
 
+::ng-deep .mat-card-header{
+
+  padding:5px !important;
+  text-align:center;
+}
+
+::ng-deep .mat-card1{
+ background-image: linear-gradient(-90deg,#00babb, #56c3c6, #ffffff);
+  padding:0 !important;
+}
+
+::ng-deep .mat-card-content{
+  padding:5px !important;
+}
+
+
+
+
 
 
 

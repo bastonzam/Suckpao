@@ -1,0 +1,73 @@
+<div align="center">
+
+  <mat-card class="example-card" style="background-color:rgb(238, 168, 147)">
+
+
+
+
+
+    <br>
+
+
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/login-storead">Login</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/check-order">check-order</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/amount">amount</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/total-list">total-list</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+
+
+
+
+
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>
+
+
+
+
+<div align="center">
+  <div class="card"  style="width: 20rem;">
+
+
+
+      <form >
+        <mat-card class = "example-card2" style="background-color:#333333" align="center">
+          <mat-card class = "example-card2" style="background-color:#003333">
+            <mat-toolbar-row>
+              <span class = "version-info" style="color:#FFFF99;" >Bikeman</span> &nbsp;
+              <span class="example-fill-remaining-space"></span>
+            </mat-toolbar-row>
+          </mat-card>
+          <br>
+          <form class="example-form">
+            <H2 class="example-full-width">login with employee</H2>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Username" [(ngModel)]="id"  [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Password" ng-hide="showpassword" type="password" placeholder="PASSWORD" [(ngModel)]="password"  [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+            <br>
+
+            <a mat-raised-button routerLink=".">Confirm</a>
+
+          </form>
+        </mat-card>
+
+
+
+
+      </form>
+
+  </div>
+</div>

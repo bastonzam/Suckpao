@@ -1,0 +1,8 @@
+.box {
+  width: 50%;
+  height: 700px;
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+
+}

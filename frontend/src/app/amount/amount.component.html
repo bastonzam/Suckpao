@@ -1,0 +1,80 @@
+<div align="center">
+
+  <mat-card class="example-card" style="background-color:rgb(238, 168, 147)">
+
+
+
+
+
+    <br>
+
+
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/login-storead">Login</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/check-order">check-order</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <router-outlet></router-outlet>
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/amount">amount</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+    <mat-button-toggle-group #group="matButtonToggleGroup" style="background-color:rgb(206, 67, 12)">
+      <mat-button-toggle value="left" style="color:#000000;" ><a href="/total-list">total-list</a></mat-button-toggle>
+    </mat-button-toggle-group>&nbsp;
+
+
+
+
+
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<mat-form-field>
+  <input type="date" class="form-control" id="dateinput" placeholder="วว/ดด/ปป">
+</mat-form-field>
+<br>
+<br>
+<br>
+<h2>รวมยอด</h2>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">ลำดับ</th>
+    <th scope="col">ชื่อซักแมน</th>
+    <th scope="col">จำนวนเงิน</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>1</th>
+    <td>เอ็มซักแมน</td>
+    <td>2000</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td>ไอซ์ซักแมน</td>
+    <td>4000</td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<div align="right">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h4>รวม</h4>&nbsp;
+  <mat-form-field class="example-full-width">
+    <input matInput  value="6000">
+  </mat-form-field>
+</div>
