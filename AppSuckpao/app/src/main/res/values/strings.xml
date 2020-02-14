@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Suckpao</string>
+    <string name="dont_have_account">Don\'t have account Sign up</string>
+    <string name="login">Login</string>
+    <string name="sign_up">SignUp</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string-array name="num_list">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5 </item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+
+    </string-array>
+    <string-array name="type_list">
+        <item>เสื้อ</item>
+        <item>กางเกง</item>
+
+
+    </string-array>
+    <string-array name="store_list">
+        <item>ซักรีดปต.4</item>
+        <item>ใต้หอ4</item>
+        <item>ใต้หอ7</item>
+
+
+    </string-array>
+    <string-array name="laundry_list">
+        <item>รีด</item>
+        <item>ไม่รีด</item>
+
+
+    </string-array>
+</resources>

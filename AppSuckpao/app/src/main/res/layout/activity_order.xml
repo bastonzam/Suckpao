@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Order">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="730dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:id="@+id/orderlist"
+            android:layout_width="413dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="48dp"
+            android:fitsSystemWindows="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ListView
+            android:id="@+id/orderlistold"
+            android:layout_width="413dp"
+            android:layout_height="287dp"
+            android:layout_marginBottom="32dp"
+            android:fitsSystemWindows="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="ออเดอร์ที่เสร็จแล้ว"
+            android:textColor="@color/blue"
+            app:layout_constraintBottom_toTopOf="@+id/orderlistold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.019"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ออเดอร์ใหม่"
+            android:textColor="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:text="จำนวน"
+            app:layout_constraintBottom_toTopOf="@+id/orderlist"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:text="จำนวน"
+            app:layout_constraintBottom_toTopOf="@+id/orderlistold"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="การรีด"
+            app:layout_constraintBottom_toTopOf="@+id/orderlist"
+            app:layout_constraintStart_toEndOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="การรีด"
+            app:layout_constraintBottom_toTopOf="@+id/orderlistold"
+            app:layout_constraintStart_toEndOf="@+id/textView18" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="ร้าน"
+            app:layout_constraintBottom_toTopOf="@+id/orderlist"
+            app:layout_constraintStart_toEndOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="ร้าน"
+            app:layout_constraintBottom_toTopOf="@+id/orderlistold"
+            app:layout_constraintStart_toEndOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="หมายเหตุ"
+            app:layout_constraintBottom_toTopOf="@+id/orderlist"
+            app:layout_constraintStart_toEndOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="หมายเหตุ"
+            app:layout_constraintBottom_toTopOf="@+id/orderlistold"
+            app:layout_constraintStart_toEndOf="@+id/textView20" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="สถานะ"
+            app:layout_constraintBottom_toTopOf="@+id/orderlist"
+            app:layout_constraintStart_toEndOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="สถานะ"
+            app:layout_constraintBottom_toTopOf="@+id/orderlistold"
+            app:layout_constraintStart_toEndOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="ราคา"
+            app:layout_constraintBottom_toBottomOf="@+id/textView14"
+            app:layout_constraintStart_toEndOf="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="ราคา"
+            app:layout_constraintBottom_toTopOf="@+id/orderlistold"
+            app:layout_constraintStart_toEndOf="@+id/textView22" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
